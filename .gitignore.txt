@@ -1,0 +1,13 @@
+bin/
+obj/
+*.user
+*.suo
+*.exe
+*.dll
+*.pdb
+*.db
+*.log
+*.cache
+*.vs/
+node_modules/
+secrets.json
