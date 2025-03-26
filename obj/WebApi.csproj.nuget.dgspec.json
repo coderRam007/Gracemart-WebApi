@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\reacts\\WebApi\\WebApi.csproj": {}
+    "C:\\Users\\Aishwarya\\OneDrive\\Documents\\GitHub\\Gracemart-WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "D:\\reacts\\WebApi\\WebApi.csproj": {
+    "C:\\Users\\Aishwarya\\OneDrive\\Documents\\GitHub\\Gracemart-WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\reacts\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\Aishwarya\\OneDrive\\Documents\\GitHub\\Gracemart-WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "D:\\reacts\\WebApi\\WebApi.csproj",
+        "projectPath": "C:\\Users\\Aishwarya\\OneDrive\\Documents\\GitHub\\Gracemart-WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\Aishwarya\\.nuget\\packages\\",
-        "outputPath": "D:\\reacts\\WebApi\\obj\\",
+        "outputPath": "C:\\Users\\Aishwarya\\OneDrive\\Documents\\GitHub\\Gracemart-WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aishwarya\\AppData\\Roaming\\NuGet\\NuGet.Config"
