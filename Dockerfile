@@ -1,14 +1,24 @@
+# Base runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 5153
 
+# Build environment
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
+COPY ["WebApi/WebApi.csproj", "WebApi/"]
+RUN dotnet restore "WebApi/WebApi.csproj"
 COPY . .
-RUN dotnet restore
-RUN dotnet publish -c Release -o /app
+WORKDIR "/src/WebApi"
+RUN dotnet build "WebApi.csproj" -c Release -o /app/build
 
+# Publish application
+FROM build AS publish
+RUN dotnet publish "WebApi.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
+# Final runtime image
 FROM base AS final
 WORKDIR /app
-COPY --from=build /app .
-ENTRYPOINT ["dotnet", "YourApiProject.dll"]
+COPY --from=publish /app/publish .
+CMD ["dotnet", "WebApi.dll", "--urls", "http://0.0.0.0:5153"]
+
