@@ -19,9 +19,10 @@ builder.Services.AddCors(options =>
                 options.AddPolicy("AllowSpecificOrigins",
                     builder =>
                     {
-                        builder.WithOrigins("http://localhost:4200","http://localhost:3000","https://gracemart-frontend-build.vercel.app/") // Another localhost
+                        builder.WithOrigins("http://localhost:4200","http://localhost:3000","https://gracemart-frontend-build.vercel.app") // Another localhost
                                .AllowAnyHeader()
-                               .AllowAnyMethod();
+                               .AllowAnyMethod()
+                               .AllowCredentials();
                     });
             });
 var app = builder.Build(); 
